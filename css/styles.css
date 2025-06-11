@@ -13,8 +13,8 @@ body {
 
 /* Header e Navegação */
 .header {
-    background-color: #2c3e50;
-    padding: 1rem 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     position: fixed;
     width: 100%;
     top: 0;
@@ -24,29 +24,26 @@ body {
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo h1 {
-    color: #fff;
     font-size: 1.5rem;
+    color: #2c3e50;
 }
 
 .nav-menu {
     display: flex;
     list-style: none;
-}
-
-.nav-menu li {
-    margin-left: 2rem;
+    gap: 2rem;
 }
 
 .nav-menu a {
-    color: #fff;
     text-decoration: none;
+    color: #2c3e50;
     font-weight: 500;
     transition: color 0.3s ease;
 }
@@ -56,41 +53,35 @@ body {
 }
 
 .hero {
-    background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)),
-                url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1511295742362-92c96b1cf484?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
     background-size: cover;
     background-position: center;
-    height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
     text-align: center;
-    color: #fff;
-    padding-top: 80px;
+    color: white;
+    padding: 0 1rem;
 }
 
 .hero-content {
     max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
 }
 
-.hero h2 {
+.hero-title {
     font-size: 3rem;
     margin-bottom: 1rem;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
 }
 
 .cta-button {
     display: inline-block;
     padding: 1rem 2rem;
     background-color: #3498db;
-    color: #fff;
+    color: white;
     text-decoration: none;
     border-radius: 5px;
+    margin-top: 2rem;
     transition: background-color 0.3s ease;
 }
 
@@ -214,7 +205,7 @@ section h2 {
 /* Footer */
 .footer {
     background-color: #2c3e50;
-    color: #fff;
+    color: white;
     text-align: center;
     padding: 2rem;
 }
@@ -229,18 +220,21 @@ section h2 {
     .nav-menu {
         margin-top: 1rem;
         flex-direction: column;
+        gap: 1rem;
     }
 
-    .nav-menu li {
-        margin: 0.5rem 0;
-    }
-
-    .hero h2 {
+    .hero-title {
         font-size: 2rem;
     }
 
-    section {
-        padding: 3rem 1rem;
+    .authors {
+        grid-template-columns: 1fr;
+    }
+
+    .circle-chart {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
     }
 }
 
@@ -417,25 +411,23 @@ section h2 {
 }
 
 .academic-info {
+    padding: 4rem 2rem;
     background-color: #f8f9fa;
-    padding: 6rem 2rem;
+    text-align: center;
 }
 
 .academic-content {
     max-width: 1200px;
     margin: 0 auto;
-    text-align: center;
 }
 
 .academic-content h2 {
     color: #2c3e50;
-    font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
 .academic-content h3 {
     color: #34495e;
-    font-size: 1.8rem;
     margin-bottom: 2rem;
 }
 
@@ -448,9 +440,9 @@ section h2 {
 
 .author-card {
     background: white;
-    border-radius: 15px;
     padding: 1.5rem;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
 }
 
@@ -464,7 +456,6 @@ section h2 {
     margin: 0 auto 1rem;
     border-radius: 50%;
     overflow: hidden;
-    border: 3px solid #3498db;
 }
 
 .author-image img {
@@ -475,40 +466,35 @@ section h2 {
 
 .author-card p {
     color: #2c3e50;
-    font-size: 1rem;
     font-weight: 500;
-    margin: 0;
 }
 
 .introduction {
     padding: 4rem 2rem;
-    background-color: #f8f9fa;
+    background-color: white;
 }
 
 .introduction-content {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
-.introduction-content h2 {
-    text-align: center;
-    color: #333;
+.introduction h2 {
+    color: #2c3e50;
     margin-bottom: 2rem;
-    font-size: 2.5rem;
+    text-align: center;
 }
 
 .introduction-text {
-    background-color: white;
+    background: #f8f9fa;
     padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .introduction-text p {
-    font-size: 1.1rem;
-    line-height: 1.8;
     color: #444;
-    margin-bottom: 1.5rem;
+    line-height: 1.8;
 }
 
 .introduction-text p:last-child {
@@ -537,7 +523,7 @@ section h2 {
     background: white;
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
 }
 
@@ -567,7 +553,7 @@ section h2 {
     background: white;
     padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .benefits h4, .risks h4, .consequences h4 {
@@ -606,4 +592,123 @@ section h2 {
     color: #3498db;
     position: absolute;
     left: 0;
+}
+
+.conclusion {
+    padding: 4rem 2rem;
+    background-color: #f8f9fa;
+}
+
+.conclusion-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.conclusion-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.conclusion-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.conclusion-icon {
+    margin-right: 1rem;
+    color: #27ae60;
+    font-size: 1.5rem;
+}
+
+.conclusion-header h3 {
+    color: #2c3e50;
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.conclusion-text {
+    color: #444;
+    line-height: 1.8;
+}
+
+.conclusion-text p {
+    margin-bottom: 1.5rem;
+}
+
+.conclusion-text p:last-child {
+    margin-bottom: 0;
+}
+
+.faq {
+    padding: 4rem 2rem;
+    background-color: #fff;
+}
+
+.faq-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 1.5rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    position: relative;
+}
+
+.faq-question h3 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 1.2rem;
+    padding-right: 2rem;
+}
+
+.faq-question::after {
+    content: "+";
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: #666;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question::after {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.faq-answer {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    padding: 1.5rem;
+    max-height: 500px;
+}
+
+.faq-answer p {
+    margin: 0;
+    color: #444;
+    line-height: 1.6;
 } 

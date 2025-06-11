@@ -242,16 +242,51 @@
             </div>
         </section>
 
-        <section id="opiniao" class="opinion">
-            <h2>Opinião Coletiva sobre o Zolpidem</h2>
-            <div class="opinion-content">
-                <div class="opinion-card">
-                    <div class="opinion-icon">
-                        <i class="fas fa-comment-medical"></i>
+        <section id="faq" class="faq">
+            <h2>Perguntas Frequentes</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>É necessário usar zolpidem para ter saúde?</h3>
                     </div>
-                    <div class="opinion-text">
-                        <p>O zolpidem é um medicamento eficaz para o tratamento da insônia de início, proporcionando alívio rápido para quem enfrenta dificuldades para dormir. No entanto, seu uso requer responsabilidade e acompanhamento médico rigoroso, pois, apesar de ser considerado mais seguro que os benzodiazepínicos tradicionais, também pode causar efeitos adversos e levar à dependência se utilizado de forma inadequada.</p>
-                        <p>Assim, é fundamental que pacientes sejam bem orientados quanto à dosagem, tempo de uso e possíveis riscos, garantindo que os benefícios do tratamento superem os possíveis prejuízos à saúde.</p>
+                    <div class="faq-answer">
+                        <p>Não. Uma boa saúde pode ser mantida com hábitos saudáveis de sono. O remédio só deve ser usado com prescrição em casos específicos.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>O uso de zolpidem é ético?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim, se for com prescrição médica e usado corretamente. É antiético quando há automedicação, uso recreativo ou venda ilegal.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Existem alternativas naturais para o uso de zolpidem?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim. Higiene do sono, chás calmantes, meditação, melatonina e terapia são opções eficazes e seguras.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>O zolpidem pode ser usado por crianças, grávidas ou lactantes?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Não. O zolpidem não deve ser usado por crianças, grávidas ou mulheres que amamentam, pois pode causar efeitos colaterais graves no bebê ou na criança. Ele só pode ser usado nesses casos com indicação médica específica, e mesmo assim com muita cautela.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Como parar de tomar zolpidem?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Com acompanhamento médico, por meio de redução gradual (desmame) e adoção de hábitos saudáveis ou terapias alternativas.</p>
                     </div>
                 </div>
             </div>
@@ -268,8 +303,8 @@
                         <h3>Análise Final</h3>
                     </div>
                     <div class="conclusion-text">
-                        <p>O zolpidem é um medicamento eficaz para o tratamento da insônia de início, proporcionando alívio rápido para quem enfrenta dificuldades para dormir. No entanto, seu uso requer responsabilidade e acompanhamento médico rigoroso, pois, apesar de ser considerado mais seguro que os benzodiazepínicos tradicionais, também pode causar efeitos adversos e levar à dependência se utilizado de forma inadequada.</p>
-                        <p>Assim, é fundamental que pacientes sejam bem orientados quanto à dosagem, tempo de uso e possíveis riscos, garantindo que os benefícios do tratamento superem os possíveis prejuízos à saúde.</p>
+                        <p>O zolpidem é um medicamento eficaz para o tratamento da insônia de curto prazo, mas seu uso indiscriminado, especialmente entre jovens, pode trazer riscos sérios à saúde física e mental. Apesar dos benefícios em situações específicas, os efeitos colaterais, a dependência e os comportamentos automáticos durante o sono mostram a importância de um uso consciente e sempre com orientação médica.</p>
+                        <p>Além disso, existem alternativas naturais e mudanças no estilo de vida que podem melhorar o sono de forma segura e saudável. É fundamental promover a conscientização sobre os perigos da automedicação e incentivar hábitos que favoreçam um sono de qualidade sem depender exclusivamente de remédios.</p>
                     </div>
                 </div>
             </div>
@@ -287,6 +322,24 @@
             circles.forEach(circle => {
                 const value = circle.getAttribute('data-value');
                 circle.style.setProperty('--value', value + '%');
+            });
+
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    
+                    faqItems.forEach(otherItem => {
+                        otherItem.classList.remove('active');
+                    });
+                    
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
             });
         });
     </script>
