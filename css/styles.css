@@ -478,4 +478,132 @@ section h2 {
     font-size: 1rem;
     font-weight: 500;
     margin: 0;
+}
+
+.introduction {
+    padding: 4rem 2rem;
+    background-color: #f8f9fa;
+}
+
+.introduction-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.introduction-content h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.introduction-text {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.introduction-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 1.5rem;
+}
+
+.introduction-text p:last-child {
+    margin-bottom: 0;
+}
+
+.sleep-info {
+    padding: 4rem 2rem;
+    background-color: #f8f9fa;
+}
+
+.sleep-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sleep-phases {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.phase-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.phase-card:hover {
+    transform: translateY(-5px);
+}
+
+.phase-card h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.sleep-note {
+    font-style: italic;
+    color: #666;
+    margin-top: 2rem;
+}
+
+.benefits-risks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.benefits, .risks, .consequences {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.benefits h4, .risks h4, .consequences h4 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.benefits ul, .risks ul, .consequences ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.benefits li, .risks li, .consequences li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.benefits li:before {
+    content: "✓";
+    color: #27ae60;
+    position: absolute;
+    left: 0;
+}
+
+.risks li:before {
+    content: "⚠";
+    color: #e74c3c;
+    position: absolute;
+    left: 0;
+}
+
+.consequences li:before {
+    content: "•";
+    color: #3498db;
+    position: absolute;
+    left: 0;
 } 
